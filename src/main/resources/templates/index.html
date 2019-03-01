@@ -4,53 +4,63 @@
 <body>
 <div th:replace="fragments :: navigation"></div>
 <br>
+<div class = "container">
+<form class>
+    <fieldset>
 
-<div class="container-fluid">
-    <span class="row border">
-        <ul class="nav nav-pills flex-column card text-center">
-            <li class="nav-item card-body">
-                <a class="nav-link active" href="#">Category</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Find a category here</a>
-                <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 37px, 0px);">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li>
-        </ul>
+    <div class="form-group">
+        <label for="Select1" class="btn btn-primary">Categories</label>
+        <select class="form-control" id="Select1">
+            <th:block th:each="agency : ${agencies}">
+            <option th:text="${agency.name}">
+            </th:block>
+        </select>
+    </div>
+    <p>
+    <button type="submit" class="btn btn-primary" form="Select1">Submit</button>
+    </p>
 
-        <ul class="nav nav-pills flex-column card text-center">
-            <li class="nav-item card-body ">
-                <a class="nav-link active" href="#">City</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Find your city here</a>
-                <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 37px, 0px);">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li>
+    </fieldset>
 
-        </ul>
+    <fieldset>
 
-        <ul class="nav nav-pills flex-column card text-center">
-            <li class="nav-item card-body">
-                <a class="nav-link active" href="#">Name</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Find a provider here</a>
-                <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 37px, 0px);">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li>
+        <div class="form-group">
+            <label for="Select2" class="btn btn-primary">City</label>
+            <select class="form-control" id="Select2">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
 
-        </ul>
-    </span>
+        <p>
+            <button type="submit" class="btn btn-primary" form="Select2">Submit</button>
+        </p>
+
+    </fieldset>
+
+    <fieldset>
+
+        <div class="form-group">
+            <label for="Select3" class="btn btn-primary">Providers</label>
+            <select class="form-control" id="Select3">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+
+        <p>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </p>
+    </fieldset>
+
+</form>
 </div>
+
 </body>
 </html>
