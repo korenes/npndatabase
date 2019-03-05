@@ -11,8 +11,8 @@
     <div class="form-group">
         <label for="Select1" class="btn btn-primary">Categories</label>
         <select class="form-control" id="Select1">
-            <th:block th:each="agency : ${agencies}">
-            <option th:text="${agency.name}">
+            <th:block th:each="category : ${categories}">
+            <option th:text="${category.name}">
             </th:block>
         </select>
     </div>
@@ -25,19 +25,20 @@
     <fieldset>
 
         <div class="form-group">
+
             <label for="Select2" class="btn btn-primary">City</label>
             <select class="form-control" id="Select2">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+                <th:block th:each="city : ${cities}">
+                        <option th:text="${city.name}">
+                </th:block>
             </select>
+
         </div>
 
         <p>
             <button type="submit" class="btn btn-primary" form="Select2">Submit</button>
         </p>
+
 
     </fieldset>
 
@@ -46,11 +47,9 @@
         <div class="form-group">
             <label for="Select3" class="btn btn-primary">Providers</label>
             <select class="form-control" id="Select3">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+                <th:block th:each="agency : ${agencies}">
+                        <option th:text="${agency.name}">
+                </th:block>
             </select>
         </div>
 
