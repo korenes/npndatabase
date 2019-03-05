@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body>
+<div th:replace="fragments :: navigation"></div>
+<br>
+
+<div class="card text-white bg-primary mb-3" style="max-width: 20rem;" th:object="${agency}">
+    <div class="card-header" th:text="*{name}">Header</div>
+    <div class="card-body">
+        <h4 class="card-title">Primary card title</h4>
+        <p class="card-text"></p>                
+    </div>
+</div>
+
+</body>
+</html>

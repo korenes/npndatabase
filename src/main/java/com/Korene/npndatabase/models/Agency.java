@@ -141,4 +141,8 @@ public class Agency {
     public void setServices(String services) {
         this.services = services;
     }
+
+    public City getCities() {
+        return cities;
+    }
 }

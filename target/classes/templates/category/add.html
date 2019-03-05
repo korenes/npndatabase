@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments::head"></head>
+<body>
+
+<div th:replace="fragments :: navigation"></div>
+<br>
+
+<form class="text-center border border-light p-5">
+<h2>Add Providers</h2>
+<div class="form-group">
+    <input class="form-control" type="text" placeholder="Name of Provider">
+</div>
+<br>
+<div class="row">
+    <!-- Grid column -->
+    <div class="col">
+        <!-- Default input -->
+        <input type="text" class="form-control" placeholder="Address">
+    </div>
+    <!-- Grid column -->
+
+    <!-- Grid column -->
+    <div class="col">
+        <!-- Default input -->
+        <input type="text" class="form-control" placeholder="City">
+    </div>
+    <!-- Grid column -->
+</div>
+
+<br>
+<div class="row">
+    <!-- Grid column -->
+    <div class="col">
+        <!-- Default input -->
+        <input type="text" class="form-control" placeholder="Phone">
+    </div>
+    <!-- Grid column -->
+
+    <!-- Grid column -->
+    <div class="col">
+        <!-- Default input -->
+        <input type="text" class="form-control" placeholder="Email">
+    </div>
+    <!-- Grid column -->
+</div>
+<br>
+<div class="row">
+    <!-- Grid column -->
+    <div class="col">
+        <!-- Default input -->
+        <input type="text" class="form-control" placeholder="Person of Contact">
+    </div>
+    <!-- Grid column -->
+
+    <!-- Grid column -->
+    <div class="col">
+        <!-- Default input -->
+        <input type="text" class="form-control" placeholder="Website">
+    </div>
+    <!-- Grid column -->
+</div>
+<br>
+<div class="form-group">
+    <div class="col">
+    <label for="exampleTextarea">Services</label>
+    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+    </div>
+
+ <div>
+     <button class="btn btn-primary my-4 btn-block" type="submit">Submit</button>
+ </div>
+</div>
+</form>
+
+</body>
+</html>
