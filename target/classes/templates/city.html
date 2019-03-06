@@ -4,39 +4,25 @@
 <body>
 <div th:replace="fragments :: navigation"></div>
 <br>
-
-<div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
-    <div class="card-header">Metting One</div>
+<div class ="card-mb-3">
+<div class="card text-white bg-primary" th:each="agency : ${agencies}">
+    <div class="card-header" th:text="${agency.name}"></div>
     <div class="card-body">
         <ul>
-            <li>Address:</li>
-            <li>City:</li>
-            <li>Phone:</li>
-            <li>Email:</li>
-            <li>Website:</li>
-            <li>Point of Contact:</li>
-            <li>Services:</li>
+            <li th:text="'Address: ' + ${agency.address}"></li>
+            <li th:text="'City: ' + ${agency.city}"></li>
+            <li th:text="'Phone: ' + ${agency.phone}"></li>
+            <li th:text="'Email: ' + ${agency.email}"></li>
+            <li th:text="'Website: ' + ${agency.website}"></li>
+            <li th:text="'Point of Contact: ' + ${agency.poc}"></li>
+            <li th:text="'Services: ' + ${agency.services}"></li>
 
         </ul>
             
     </div>
 </div>
+</div>
 
-<div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
-    <div class="card-header">Header</div>
-    <div class="card-body">
-        <ul>
-            <li>Address:</li>
-            <li>City:</li>
-            <li>Phone:</li>
-            <li>Email:</li>
-            <li>Website:</li>
-            <li>Point of Contact:</li>
-            <li>Services:</li>
-
-        </ul>
-            
-    </div>
 </div>
 
 </body>

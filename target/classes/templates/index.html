@@ -4,37 +4,45 @@
 <body>
 <div th:replace="fragments :: navigation"></div>
 <br>
-<div class = "container">
-<form class>
+<div class = "container-fluid">
+    <div class ="span">
+<form>
     <fieldset>
 
     <div class="form-group">
-        <label for="Select1" class="btn btn-primary">Categories</label>
+        <div class="row">
+            <div class="col-lg-4">
+        <label for="Select1" class="btn btn-info w-50 p-3">Categories</label>
         <select class="form-control" id="Select1">
             <th:block th:each="category : ${categories}">
             <option th:text="${category.name}">
             </th:block>
         </select>
+            </div>
+        </div>
     </div>
-    <p>
+
     <button type="submit" class="btn btn-primary" form="Select1">Submit</button>
     </p>
 
     </fieldset>
 </form>
+<br>
 
 <form action ="/city?id=1" method="post">
     <fieldset>
 
         <div class="form-group">
-
-            <label for="Select2" class="btn btn-primary">City</label>
+            <div class="row">
+                <div class="col-lg-4">
+            <label for="Select2" class="btn btn-info w-50 p-3">City</label>
             <select class="form-control" id="Select2">
                 <th:block th:each="city : ${cities}">
                         <option th:text="${city.name}">
                 </th:block>
             </select>
-
+                </div>
+            </div>
         </div>
 
         <p>
@@ -45,16 +53,21 @@
     </fieldset>
 </form>
 
+<br>
 <form action ="/agency?id=1" method = "post">
     <fieldset>
 
         <div class="form-group">
-            <label for="Select3" class="btn btn-primary">Providers</label>
+            <div class="row">
+                <div class="col-lg-4">
+            <label for="Select3" class="btn btn-info w-50 p-3">Providers</label>
             <select class="form-control" id="Select3">
                 <th:block th:each="agency : ${agencies}">
                         <option th:text="${agency.name}">
                 </th:block>
             </select>
+                </div>
+            </div>
         </div>
 
         <p>
@@ -63,6 +76,7 @@
     </fieldset>
 
 </form>
+</div>
 </div>
 
 </body>

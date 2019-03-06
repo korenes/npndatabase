@@ -4,13 +4,21 @@
 <body>
 <div th:replace="fragments :: navigation"></div>
 <br>
-
-<div class="card text-white bg-primary mb-3" style="max-width: 20rem;" th:object="${agency}">
-    <div class="card-header" th:text="*{name}">Header</div>
-    <div class="card-body">
-        <h4 class="card-title">Primary card title</h4>
-        <p class="card-text"></p>                
+<div class ="container">
+<div th:object="${agency}">
+    <h1  th:text="*{name}">Header</h1>
+    <div >
+        <h3  class="text-success" th:text="*{poc}">Primary card title</h3>
+        <h5  th:text="*{address}"></h5>
+        <h5  th:text="*{city}"></h5>
+        <h5  th:text="*{email}"></h5> 
+        <h5  th:text="*{website}"></h5>
+        <h5  th:text="*{phone}"></h5>
+        <br>
+        <br>
+        <h5  th:text="'Services: ' + *{services}"></h5>  
     </div>
+</div>
 </div>
 
 </body>
